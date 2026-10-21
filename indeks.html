@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Penduduk Lombok Barat</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff8ed;
+            color: #393044;
+        }
+
+        header {
+            background-color: #604477;
+            color: white;
+            padding: 25px 8%;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            width: 70px;
+            height: 85px;
+            object-fit: contain;
+            background: white;
+            border-radius: 8px;
+            padding: 5px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 25px;
+        }
+
+        header p {
+            margin-bottom: 0;
+            color: #eee3f5;
+        }
+
+        nav {
+            background: #f0e5f4;
+            padding: 13px 8%;
+        }
+
+        nav a {
+            color: #604477;
+            text-decoration: none;
+            margin-right: 22px;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #604477;
+            margin-bottom: 8px;
+        }
+
+        .pengantar {
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .ringkasan {
+            background: white;
+            padding: 20px;
+            border-left: 5px solid #604477;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .ringkasan p {
+            margin: 5px 0;
+        }
+
+        .kontrol {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin: 18px 0;
+            flex-wrap: wrap;
+        }
+
+        input, button {
+            padding: 10px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        input {
+            border: 1px solid #cdbbd8;
+            background: white;
+            flex: 1;
+            min-width: 180px;
+        }
+
+        button {
+            background: #604477;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #402b51;
+        }
+
+        .tabel {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            border: 1px solid #e5dbea;
+        }
+
+        th {
+            background: #604477;
+            color: white;
+            text-align: left;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f5edf8;
+        }
+
+        td:first-child {
+            text-align: center;
+            width: 60px;
+        }
+
+        td:last-child {
+            text-align: right;
+        }
+
+        tfoot {
+            background: #eee3f5;
+            font-weight: bold;
+        }
+
+        .catatan {
+            font-size: 13px;
+            color: #756b7b;
+            margin-top: 12px;
+        }
+
+        .sumber {
+            margin-top: 30px;
+            padding: 18px;
+            background: #f0e5f4;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        .sumber a {
+            color: #604477;
+        }
+
+        footer {
+            background: #402b51;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                gap: 12px;
+            }
+
+            .logo {
+                width: 55px;
+                height: 70px;
+            }
+
+            header h1 {
+                font-size: 19px;
+            }
+
+            nav a {
+                margin-right: 12px;
+                font-size: 13px;
+            }
+
+            main {
+                padding: 0 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <img
+                class="logo"
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Lambang_Kabupaten_Lombok_Barat.jpeg"
+                alt="Lambang Kabupaten Lombok Barat"
+                onerror="this.style.display='none'"
+            >
+            <div>
+                <h1>Kabupaten Lombok Barat</h1>
+                <p>Data Jumlah Penduduk Menurut Kecamatan</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#data">Data Penduduk</a>
+        <a href="#sumber">Sumber</a>
+    </nav>
+
+    <main id="beranda">
+        <section class="pengantar">
+            <h2>Data Kependudukan</h2>
+            <p>
+                Halaman ini menyajikan data jumlah penduduk
+                Kabupaten Lombok Barat berdasarkan kecamatan.
+                Data statistik dapat digunakan untuk melihat
+                persebaran penduduk di setiap wilayah.
+            </p>
+        </section>
+
+        <section class="ringkasan">
+            <p><strong>Wilayah:</strong> Kabupaten Lombok Barat</p>
+            <p><strong>Provinsi:</strong> Nusa Tenggara Barat</p>
+            <p><strong>Jumlah kecamatan:</strong> 10</p>
+            <p><strong>Sumber data:</strong> BPS Kabupaten Lombok Barat</p>
+        </section>
+
+        <section id="data">
+            <h2>Jumlah Penduduk per Kecamatan</h2>
+
+            <div class="kontrol">
+                <input
+                    type="text"
+                    id="cari"
+                    placeholder="Cari kecamatan..."
+                >
+                <button onclick="unduhCSV()">Unduh Data</button>
+            </div>
+
+            <div class="tabel">
+                <table id="tabelPenduduk">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Kecamatan</th>
+                            <th>Jumlah Penduduk (jiwa)</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <!-- Periksa angka sesuai tabel resmi BPS -->
+                        <tr>
+                            <td>1</td>
+                            <td>Sekotong</td>
+                            <td data-jumlah="71202">71.202</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Lembar</td>
+                            <td data-jumlah="58548">58.548</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Gerung</td>
+                            <td data-jumlah="96406">96.406</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Labu Api</td>
+                            <td data-jumlah="84959">84.959</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Kediri</td>
+                            <td data-jumlah="68313">68.313</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Kuripan</td>
+                            <td data-jumlah="44985">44.985</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Narmada</td>
+                            <td data-jumlah="110426">110.426</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Lingsar</td>
+                            <td data-jumlah="81556">81.556</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Gunung Sari</td>
+                            <td data-jumlah="102213">102.213</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Batu Layar</td>
+                            <td data-jumlah="57692">57.692</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Total</td>
+                            <td id="total">775.300</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <p class="catatan">
+                Catatan: angka pada tabel perlu dicocokkan dengan
+                publikasi BPS untuk tahun yang dipilih sebelum
+                digunakan sebagai data resmi.
+            </p>
+        </section>
+
+        <section class="sumber" id="sumber">
+            <h2>Sumber Data</h2>
+            <p>
+                Badan Pusat Statistik Kabupaten Lombok Barat.
+                Data dan publikasi dapat dilihat melalui situs resmi:
+            </p>
+            <a
+                href="https://lombokbaratkab.bps.go.id/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                BPS Kabupaten Lombok Barat
+            </a>
+            <br>
+            <a
+                href="https://lombokbaratkab.go.id/sekilas-lobar/Makna%20Lambang/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Lambang Kabupaten Lombok Barat
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Data Kependudukan Kabupaten Lombok Barat</p>
+        <p>Sumber: Badan Pusat Statistik Kabupaten Lombok Barat</p>
+    </footer>
+
+    <script>
+        const kolomJumlah = document.querySelectorAll(
+            "#tabelPenduduk tbody [data-jumlah]"
+        );
+
+        let jumlahTotal = 0;
+
+        kolomJumlah.forEach(function (kolom) {
+            jumlahTotal += Number(kolom.dataset.jumlah);
+        });
+
+        document.getElementById("total").textContent =
+            jumlahTotal.toLocaleString("id-ID");
+
+        document.getElementById("cari").addEventListener(
+            "input",
+            function () {
+                const kata = this.value.toLowerCase();
+
+                document.querySelectorAll(
+                    "#tabelPenduduk tbody tr"
+                ).forEach(function (baris) {
+                    const nama = baris.cells[1].textContent.toLowerCase();
+
+                    baris.style.display =
+                        nama.includes(kata) ? "" : "none";
+                });
+            }
+        );
+
+        function unduhCSV() {
+            const baris = document.querySelectorAll(
+                "#tabelPenduduk tr"
+            );
+
+            const hasil = [];
+
+            baris.forEach(function (barisData) {
+                if (
+                    barisData.parentElement.tagName === "TBODY" &&
+                    barisData.style.display === "none"
+                ) {
+                    return;
+                }
+
+                const nilai = Array.from(
+                    barisData.querySelectorAll("th, td")
+                ).map(function (sel) {
+                    return '"' + sel.textContent.trim() + '"';
+                });
+
+                hasil.push(nilai.join(","));
+            });
+
+            const file = new Blob(
+                ["\uFEFF" + hasil.join("\r\n")],
+                { type: "text/csv;charset=utf-8;" }
+            );
+
+            const url = URL.createObjectURL(file);
+            const link = document.createElement("a");
+
+            link.href = url;
+            link.download = "data-penduduk-lombok-barat.csv";
+            link.click();
+
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
